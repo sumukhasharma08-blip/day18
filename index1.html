@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Navigation and Organization</title>
+    <style>
+        /* Basic styling to make the Nav bar look like a Nav bar */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            gap: 20px;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        /* Adding height so the internal link has room to "jump" */
+        .spacer {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#lists" title="Go to Lists">Lists</a></li>
+            <li><a href="#links" title="Go to Links">Links</a></li>
+            <li><a href="mailto:support@example.com">Contact Support</a></li>
+            <li><a href="tel:+15555555555">Call Us</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <section id="lists">
+        <h2>Organization and Lists</h2>
+        
+        <h3>My Favorite Foods</h3>
+        <ul>
+            <li>Truffle Risotto</li>
+            <li>Spicy Ramen</li>
+            <li>Mango Sticky Rice</li>
+        </ul>
+
+        <h3>Morning Routine</h3>
+        <ol>
+            <li>Wake up at 6:30 AM</li>
+            <li>Meditate for 10 minutes</li>
+            <li>Make a high-protein breakfast</li>
+        </ol>
+
+        <h3>Daily To-Do List</h3>
+        <ol>
+            <li>Complete Project Report
+                <ul>
+                    <li>Gather data points</li>
+                    <li>Design the charts</li>
+                </ul>
+            </li>
+            <li>Workout
+                <ul>
+                    <li>30 mins Cardio</li>
+                    <li>Weight training</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Web Terms</h3>
+        <dl>
+            <dt>Browser</dt>
+            <dd>A software application for accessing information on the World Wide Web.</dd>
+            <dt>Hyperlink</dt>
+            <dd>A reference to data that the user can follow by clicking or tapping.</dd>
+            <dt>Server</dt>
+            <dd>A computer program or device that provides a service to another computer program.</dd>
+        </dl>
+
+        <h3>Roman Numeral List</h3>
+        <ol type="I">
+            <li>Introduction</li>
+            <li>Main Content</li>
+            <li>Conclusion</li>
+        </ol>
+
+        <h3>List Starting at 10</h3>
+        <ol start="10">
+            <li>Step Ten</li>
+            <li>Step Eleven</li>
+            <li>Step Twelve</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section id="links">
+        <h2>Navigation and Specialized Links</h2>
+
+        <p>
+            Visit <a href="https://www.google.com" target="_blank">Google</a> (opens in a new tab).
+        </p>
+
+        <p>
+            <a href="https://www.wikipedia.org">
+                <img src="https://via.placeholder.com/150x50?text=Click+Me" alt="Clickable Placeholder Image">
+            </a>
+        </p>
+
+        <p>
+            Download our <a href="sample-guide.pdf" download>User Manual (PDF)</a>.
+        </p>
+
+        <p>
+            Ready to finish? <a href="#page-bottom">Jump to the bottom of the page</a>.
+        </p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <footer id="page-bottom">
+        <p><strong>You've reached the bottom!</strong> This is the target for the internal jump link.</p>
+    </footer>
+
+</body>
+</html>

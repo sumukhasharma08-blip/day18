@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Interaction Form</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; max-width: 600px; margin: auto; }
+        fieldset { border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        legend { font-weight: bold; padding: 0 10px; }
+        div { margin-bottom: 15px; }
+        label { display: inline-block; width: 140px; vertical-align: top; }
+        input[type="text"], input[type="password"], input[type="email"], 
+        input[type="number"], input[type="search"], select, textarea {
+            width: 250px; padding: 5px;
+        }
+        .buttons { margin-top: 20px; display: flex; gap: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive User Form</h1>
+
+    <form action="/submit-form" method="POST">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="e.g. John" required>
+            </div>
+
+            <div>
+                <label for="user-email">Email Address:</label>
+                <input type="email" id="user-email" name="user-email" required>
+            </div>
+
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass">
+            </div>
+
+            <div>
+                <label for="browser-choice">Preferred Browser:</label>
+                <input list="browsers" id="browser-choice" name="browser-choice">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Safari">
+                    <option value="Edge">
+                </datalist>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences & Feedback</legend>
+
+            <div>
+                <label>Account Type:</label><br>
+                <input type="radio" id="personal" name="account" value="personal">
+                <label for="personal" style="width:auto">Personal</label>
+                <input type="radio" id="business" name="account" value="business">
+                <label for="business" style="width:auto">Business</label>
+                <input type="radio" id="education" name="account" value="education">
+                <label for="education" style="width:auto">Education</label>
+            </div>
+
+            <div>
+                <label>Interests:</label><br>
+                <input type="checkbox" id="coding" name="interest" value="coding" checked>
+                <label for="coding" style="width:auto">Coding</label>
+                <input type="checkbox" id="design" name="interest" value="design">
+                <label for="design" style="width:auto">Design</label>
+            </div>
+
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="bio">Short Bio:</label><br>
+                <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself..."></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detailed Data</legend>
+
+            <div>
+                <label for="age">Age (18-99):</label>
+                <input type="number" id="age" name="age" min="18" max="99">
+            </div>
+
+            <div>
+                <label for="volume">Notification Volume:</label>
+                <input type="range" id="volume" name="volume" min="0" max="100">
+            </div>
+
+            <div>
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+
+            <div>
+                <label for="theme-color">Theme Color:</label>
+                <input type="color" id="theme-color" name="theme-color" value="#ff0000">
+            </div>
+
+            <div>
+                <label for="profile-pic">Upload Avatar:</label>
+                <input type="file" id="profile-pic" name="profile-pic">
+            </div>
+
+            <div>
+                <label for="id-code">User ID (Read-only):</label>
+                <input type="text" id="id-code" name="id-code" value="USR-999" readonly>
+            </div>
+
+            <div>
+                <label for="status">System Status:</label>
+                <input type="text" id="status" name="status" value="Disabled Field" disabled>
+            </div>
+
+            <input type="hidden" name="session_id" value="xyz789">
+
+            <div>
+                <label for="site-search">Search Site:</label>
+                <input type="search" id="site-search" name="q">
+            </div>
+        </fieldset>
+
+        <div class="buttons">
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset Form</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

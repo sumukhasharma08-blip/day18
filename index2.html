@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data and Assets Demo</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; }
+        section { border-bottom: 2px solid #eee; padding: 40px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+        caption { font-weight: bold; margin-bottom: 10px; }
+        .nav-list { background: #f4f4f4; padding: 10px; list-style: none; display: flex; gap: 15px; }
+    </style>
+</head>
+<body>
+
+    <h1>Data and Asset Showcase</h1>
+
+    <nav>
+        <strong>Jump to Schedule:</strong>
+        <ul class="nav-list">
+            <li><a href="#morning">Morning Session</a></li>
+            <li><a href="#afternoon">Afternoon Session</a></li>
+            <li><a href="#evening">Evening Notes</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Images & Figures</h2>
+        
+        <img src="https://via.placeholder.com/300x200" alt="A descriptive placeholder image" width="300" height="200">
+
+        <figure>
+            <img src="https://via.placeholder.com/400x200/444/fff" alt="Abstract dark landscape">
+            <figcaption>Figure 1: An example of a dark-themed placeholder image.</figcaption>
+        </figure>
+
+        <h3>Responsive Picture</h3>
+        <picture>
+            <source media="(min-width: 800px)" srcset="https://via.placeholder.com/800x200/orange/white?text=Desktop+View">
+            <source media="(min-width: 400px)" srcset="https://via.placeholder.com/400x150/blue/white?text=Tablet+View">
+            <img src="https://via.placeholder.com/200x100/green/white?text=Mobile" alt="Responsive placeholder">
+        </picture>
+    </section>
+
+    <section>
+        <h2>Weekly Schedule Table</h2>
+        <table border="1">
+            <caption>Weekly Employee Training Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Time Slot</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="morning">
+                    <td>09:00 AM</td>
+                    <td colspan="2">Onboarding Workshop (Joint)</td>
+                    <td>Coding Review</td>
+                </tr>
+                <tr id="afternoon">
+                    <td>01:00 PM</td>
+                    <td>Project Alpha</td>
+                    <td rowspan="2">Deep Work Session</td>
+                    <td style="background-image: url('https://via.placeholder.com/100x50/cccccc');">External Meeting</td>
+                </tr>
+                <tr>
+                    <td>03:00 PM</td>
+                    <td>Break</td>
+                    <td>Email Sync</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr id="evening">
+                    <td colspan="4">Note: All sessions are subject to change based on lead availability.</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Multimedia & Embeds</h2>
+
+        <h3>YouTube Embed</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+        <h3>Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937619067!2d-73.98731968459391!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480293%3A0x517f2152eb58dd8a!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1647453448405!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <h3>Audio Sample</h3>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Sample</h3>
+        <video width="320" height="240" controls poster="https://via.placeholder.com/320x240?text=Click+to+Play">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Inline SVG Shape</h2>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+        <p>A simple red circle generated via SVG.</p>
+    </section>
+
+</body>
+</html>

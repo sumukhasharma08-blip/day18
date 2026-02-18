@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive HTML showcase featuring a Resume, Survey, Article, and more.">
+    <title>The Master HTML Showcase</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
+        header, .hero { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
+        nav { background: #34495e; padding: 10px; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin: 0 10px; text-decoration: none; font-size: 0.9em; }
+        section { padding: 40px 20px; max-width: 1000px; margin: auto; border-bottom: 1px solid #eee; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        footer { background: #f4f4f4; padding: 40px 20px; }
+        .footer-cols { display: flex; justify-content: space-between; flex-wrap: wrap; }
+        table { width: 100%; border-collapse: collapse; }
+        .gallery-table td { padding: 5px; border: 1px solid #ddd; }
+        dt { font-weight: bold; color: #e67e22; margin-top: 10px; }
+        .comment { border-left: 5px solid #ddd; padding-left: 15px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#article">News</a>
+        <a href="#resume">Resume</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#glossary">Glossary</a>
+        <a href="#survey">Survey</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="hero" class="hero">
+        <h1>Welcome to the HTML Masterclass</h1>
+        <p>A single page demonstrating every structural element of the modern web.</p>
+        <button onclick="location.href='#survey'">Get Started</button>
+    </header>
+
+    <main>
+        <article id="article">
+            <header>
+                <h2>Breaking: HTML6 Rumors Surface</h2>
+                <p>By <em>Tech Reporter</em> | <time datetime="2026-02-18">Feb 18, 2026</time></p>
+            </header>
+            <figure>
+                <img src="https://via.placeholder.com/800x300" alt="Abstract code background" style="width:100%;">
+                <figcaption>Visual representation of the evolving web standards.</figcaption>
+            </figure>
+            <section>
+                <h3>The Evolution</h3>
+                <p>Standardization has reached a peak. Today, developers use semantic tags to ensure <strong>accessibility</strong> and <strong>SEO</strong>.</p>
+            </section>
+            <section>
+                <h3>Community Feedback</h3>
+                <div class="comment">
+                    <article>
+                        <p>"Great summary! I love using the &lt;main&gt; tag."</p>
+                        <footer>— Posted by <strong>WebDev_Pro</strong></footer>
+                    </article>
+                </div>
+            </section>
+        </article>
+
+        <section id="resume">
+            <h2>Professional Resume</h2>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Sumukha Sharma K - Full Stack Developer</th>
+                </tr>
+                <tr>
+                    <td><strong>Skills:</strong></td>
+                    <td>HTML5, CSS3, MySQL, Python, JavaScript, SEO, Accessibility</td>
+                </tr>
+                <tr>
+                    <td><strong>Experience:</strong></td>
+                    <td>
+                        <ul>
+                            <li>Lead Developer at WebCorp (2022-2026)</li>
+                            <li>Junior Dev at StartUp Inc (2020-2022)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="menu">
+            <h2>Restaurant Menu</h2>
+            <dl>
+                <dt>Semantic Salmon — $24.00</dt>
+                <dd>Fresh Atlantic salmon served with a side of metadata and wild rice.</dd>
+                <dt>Input Burger — $15.50</dt>
+                <dd>A beef patty with your choice of multiple checkbox toppings.</dd>
+                <dt>SVG Salad — $12.00</dt>
+                <dd>Crispy greens cut into perfect geometric shapes.</dd>
+            </dl>
+        </section>
+
+        <section id="gallery">
+            <h2>Old School 3x3 Gallery</h2>
+            <table class="gallery-table">
+                <tr>
+                    <td><img src="https://via.placeholder.com/150" alt="G1"></td>
+                    <td><img src="https://via.placeholder.com/150" alt="G2"></td>
+                    <td><img src="https://via.placeholder.com/150" alt="G3"></td>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/150" alt="G4"></td>
+                    <td><img src="https://via.placeholder.com/150" alt="G5"></td>
+                    <td><img src="https://via.placeholder.com/150" alt="G6"></td>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/150" alt="G7"></td>
+                    <td><img src="https://via.placeholder.com/150" alt="G8"></td>
+                    <td><img src="https://via.placeholder.com/150" alt="G9"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="id-anchors">
+            <h2 id="glossary">HTML Glossary</h2>
+            <p>Jump to: <a href="#tag-a">A</a> | <a href="#tag-b">B</a> | <a href="#tag-c">C</a></p>
+            <dl>
+                <dt id="tag-a">&lt;a&gt;</dt>
+                <dd>Defines a hyperlink.</dd>
+                <dt id="tag-b">&lt;body&gt;</dt>
+                <dd>Contains the visible page content.</dd>
+                <dt id="tag-c">&lt;code&gt;</dt>
+                <dd>Defines a piece of computer code.</dd>
+            </dl>
+        </section>
+
+        <section id="survey">
+            <h2>User Experience Survey</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Survey Questions</legend>
+                    
+                    <div>1. Name: <input type="text" name="name" required></div>
+                    <div>2. Email: <input type="email" name="email" required></div>
+                    <div>3. Age: <input type="number" name="age" min="1" max="100"></div>
+                    <div>4. Password: <input type="password" name="pw"></div>
+                    <div>5. Satisfaction: <input type="range" name="sat" min="1" max="10"></div>
+                    <div>6. Date Visited: <input type="date" name="visit"></div>
+                    <div>7. Favorite Color: <input type="color" name="color"></div>
+                    <div>8. File Upload: <input type="file" name="upload"></div>
+                    <div>9. Gender: 
+                        <input type="radio" id="m" name="g" value="m"><label for="m">M</label>
+                        <input type="radio" id="f" name="g" value="f"><label for="f">F</label>
+                    </div>
+                    <div>10. Newsletter: <input type="checkbox" name="news" checked></div>
+                    
+                    <div style="margin-top:20px;">
+                        <button type="submit">Submit Survey</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-cols">
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://validator.w3.org/">W3C Validator</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <address>
+                    123 Code Lane<br>
+                    HTML City, WEB 101<br>
+                    <a href="tel:+123456789">Call Support</a>
+                </address>
+            </div>
+        </div>
+        <hr>
+        <p style="text-align:center;">&copy; 2026 The HTML Mastery Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
