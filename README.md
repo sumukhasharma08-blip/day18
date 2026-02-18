@@ -1,2 +1,2 @@
-# day18
-HTML
+# HTML
+Basics of HTML
